@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Website</title>
+    <link rel="icon" href="boy.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&family=REM:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            font-size: 1.7rem;
+            font-family: 'Merienda';
+            box-sizing: border-box;
+        }
+        /* Header section */
+        .header
+        {
+            display: inline;
+            /* position: fixed; */
+            /* z-index: 1; */
+            /* width: 100%; */
+        }
+        .head
+        {
+            display: inline;
+            flex-direction: row;
+            width: 100%;
+        }
+        .header input
+        {
+            /* height: 150px; */
+            font-size: 0.85rem;
+            position: absolute;
+            right: 32px;
+            top: 30px;
+            
+        }
+        .logo 
+        {
+            /* display: flex; */
+            height: 100px;
+            width: 120px;
+            position: absolute;
+            top: 0;
+        }
+        .header ul
+        {
+            display: flex; 
+            flex-direction: row;
+            background-color:#0e0e0e;
+            /* justify-content: space-evenly; */
+             align-items:center ;
+
+        }
+        .header ul li 
+        {
+            list-style: none;
+        }
+        .header ul li a 
+        {
+            color: white;
+            text-decoration: none;
+            font-size: 0.85rem;
+            margin-left: 170px;
+        }
+        .search_img
+        {
+            height: 20px;
+            width: 20px;
+            cursor: pointer;
+            position: absolute;
+            right: 32px;
+            top: 38px;
+            background-color: white;
+        }
+
+        /* section1*/
+        .section1-img
+        {
+            position: relative;
+            background-image: url('image1.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 715px;
+            width: 100%; 
+        }
+        .section1-content
+        {
+            position: absolute;
+            top: 50%;
+            left: 38%;
+            color: white;
+            background-color:#313534 ;
+            border: 2px solid ;
+        }
+        
+         /* section2 */
+        .section2
+        {
+            padding:80px ;
+            width: 100%;
+            border: 2px solid;
+        }
+         .section2 h4
+        {
+            font-size: 1rem;
+            text-align: center;
+        }
+        .section2 p
+        {
+            font-size: 1rem;
+            /* line-height: 40px; */
+            text-align: center;
+            /* padding: 80px; */
+        }
+        
+        /*section3 */
+
+        .section3-img
+        {
+            /* position: relative; */
+            background-image: url('image2.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 915px;
+            width: 100%; 
+        }
+        .section3-content
+        {
+            position:absolute;
+            top: 35em;
+            left: 40%;
+            color: white;
+            background-color:#313534 ;
+            border: 2px solid ;
+        }
+         /* section4 */
+         .section4
+        {
+            padding:80px ;
+            width: 100%;
+            border: 2px solid;
+        }
+         .section4 h4
+        {
+            font-size: 1rem;
+            text-align: center;
+        }
+        .section4 p
+        {
+            font-size: 1rem;
+            /* line-height: 40px; */
+            text-align: center;
+            /* padding: 80px; */
+        }
+        /*section5 */
+        
+        .section5-img
+        {
+            /* position: relative; */
+            background-image: url('image3.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 915px;
+            width: 100%; 
+        }
+        .section5-content
+        {
+            position:absolute;
+            top: 60em;
+            left: 35%;
+            color: white;
+            background-color:#313534 ;
+            border: 2px solid ;
+        }
+          /* section6 */
+          .section6
+        {
+            padding:80px ;
+            width: 100%;
+            border: 2px solid;
+        }
+         .section6 h4
+        {
+            font-size: 1rem;
+            text-align: center;
+        }
+        .section6 p
+        {
+            font-size: 1rem;
+            /* line-height: 40px; */
+            text-align: center;
+            /* padding: 80px; */
+        }
+        /*section7 */
+        .section7
+        {
+            /* width: 100%; */
+            /* position:absolute; */
+        }
+        .section7-img
+        {
+            /* position: relative; */
+            background-image: url(pexels-james-wheeler-1486974.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 915px;
+            width: 100%; 
+        }
+        .section7-content
+        {
+            position:absolute;
+            top: 87em;
+            left: 40%;
+            color: white;
+            background-color:#313534 ;
+            border: 2px solid ;
+        }
+        .footer
+        {
+            display: flex;
+            justify-content: center;
+            background-color: #313534;
+            border-top: 3px solid white;
+            
+        }
+        .footer p 
+        { 
+            font-size: 1rem;
+            padding: 22px;
+            color: white;
+            align-self: center;
+        }
+        .footer img 
+        {
+            height: 120px;
+            width: 120px;
+            padding: 22px;
+
+        }
+        @media (min-width:2560px ) and (max-width: 4000px)
+        {
+            .section1-content
+            {
+                /* position: relative; */
+                left: 45%;
+                top: 13rem;
+            }
+            .section3-content
+            {
+                top: 55rem;
+                left: 42%;
+            }
+            .section5-content
+            {
+                top: 98rem;
+                left: 40%;
+            }
+        
+            .section7-content
+            {
+                top: 140rem;
+                left: 45%;
+            }
+        }
+        @media (min-width: 426px ) and (max-width: 768px)
+        {
+            .section1-content
+            {
+                /* position: relative; */
+                left: 30%;
+            }
+            .section3-content
+            {
+                top: 55rem;
+                left: 30%;
+            }
+            .section5-content
+            {
+                top: 110rem;
+                left: 20%;
+            }
+        
+            .section7-content
+            {
+                top: 160rem;
+                left: 30%;
+            }
+        }
+        @media (min-width: 375px ) and (max-width: 425px )
+        {   
+            .section1-content
+            {
+                /* position: relative; */
+                left: 112vw;
+                /* width: 100%; */
+            }
+            .section3-content
+            {
+                top: 110px;
+                left: 30%;
+            }
+        }   
+        
+    </style>
+</head>
+
+<body>
+    <!-- <div class="header">
+    <div class="head">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Blogs</a></li>
+        </ul>
+        <input type="text" placeholder="Search here"></input>
+        <img class="search_img" src="search_btn.png" alt="search-btn-img">
+    </div>
+    </div> -->
+    <div class="section1">
+        <div class="section1-img">
+
+        </div>
+        <div class="section1-content">
+            Parallex Website
+        </div>
+    </div>
+
+    <div class="section2">
+        <div class="section2-content2">
+            <p>Section One</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, sed explicabo alias numquam excepturi modi 
+            assumenda placeat laudantium nisi? Placeat, quibusdam dolor rerum fuga accusamus facilis. Perspiciatis consequuntur amet hic
+            </p>
+         </div> 
+    </div>
+     
+    <div class="section3">
+            <div class="section3-img">
+
+            </div>
+            <div class="section3-content">
+                Explore nature
+            </div>
+    </div>  
+    
+    <div class="section4">
+        <div class="section4-content2">
+            <p>Section Two</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, sed explicabo alias numquam excepturi modi 
+            assumenda placeat laudantium nisi? Placeat, quibusdam dolor rerum fuga accusamus facilis. Perspiciatis consequuntur amet hic
+            </p>
+         </div> 
+    </div>
+
+    <div class="section5">
+        <div class="section5-img">
+
+        </div>
+        <div class="section5-content">
+            Look Deep into nature
+    </div>
+
+    <div class="section6">
+        <div class="section6-content2">
+            <p>Section Two</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, sed explicabo alias numquam excepturi modi 
+            assumenda placeat laudantium nisi? Placeat, quibusdam dolor rerum fuga accusamus facilis. Perspiciatis consequuntur amet hic
+            </p>
+         </div> 
+    </div>
+
+    <div class="section7">
+        <div class="section7-img">
+
+        </div>
+        <div class="section7-content">
+            Do some coding
+    </div>
+
+    <div class="footer">
+        <img src="Mehul.png" alt="MehulNawal-img">
+        <p>Mehul Nawal ©2023 </p>
+    </div>
+</div> 
+</body>
+</html>
